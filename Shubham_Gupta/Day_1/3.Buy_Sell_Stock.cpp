@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 // leetcode 121
+
 int maxProfit(vector<int> &prices)
 {
     int n = prices.size();
