@@ -1,8 +1,6 @@
 /*Move all negative numbers to beginning and positive to end with constant extra space*/
 
 
-// fuck ratings, i am in love with learning process
-
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
