@@ -6,7 +6,7 @@
 int maxSubarraySum(int arr[], int n){
     
     // Your code here
-    int sum = 0, curr = 0;
+    int sum = INT_MIN, curr = 0;
     
     for(int i=0;i<n;i++){
         curr+=arr[i];
