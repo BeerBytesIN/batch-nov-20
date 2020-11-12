@@ -1,0 +1,10 @@
+class Solution {
+    static int countSquares(int N) {
+        int total=0;
+        double num = Math.sqrt(N);
+        
+        for(int i=1;i<num;i++)
+            total++;
+        return total;
+    }
+};

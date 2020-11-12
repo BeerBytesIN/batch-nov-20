@@ -1,0 +1,26 @@
+class GFG {
+	public static void main (String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    int t=sc.nextInt();
+	    for(int k=0;k<t;k++){
+	        int size = sc.nextInt();
+	        int[] arr = new int[size];
+	        for(int j=0;j<size;j++)
+	            arr[j]=sc.nextInt();
+    		int total=0,temp=0;
+    		Set<Integer> set = new HashSet<>();
+    	    for(int i=0;i<size;i++){
+    	        total+=arr[i];
+    	        
+    	        if(total==0 || set.contains(total))
+    	            temp=1;;
+    	        set.add(total);
+    	    }	
+    	    if(temp==1)
+    	        System.out.println("Yes");
+    	    else
+    	        System.out.println("No");
+	    }
+		
+	}
+}

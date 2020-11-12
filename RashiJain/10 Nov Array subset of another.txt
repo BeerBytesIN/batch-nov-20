@@ -1,0 +1,42 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int test=sc.nextInt();
+		for(int k=0;k<test;k++){
+		    
+		    int n=sc.nextInt();
+		    int m=sc.nextInt();
+		    int[] first=new int[n];
+		    for(int j=0;j<n;j++)
+		        first[j]=sc.nextInt();
+		        
+		    int[] second=new int[m];
+		    for(int j=0;j<m;j++)
+		        second[j]=sc.nextInt();
+		        
+		    int temp=0,t;
+		    for(int i=0;i<m;i++){
+		        temp=0;
+		        for(int j=0;j<n;j++){
+		            if(first[j]==second[i]){
+		                temp=1;
+		                first[j]=first[n-1];
+		                n--;
+		            }
+		        }
+		        if(temp==0)
+		            break;
+		    }
+		    if(temp==1)
+		        System.out.println("Yes");
+		    else
+		        System.out.println("No");
+		}
+	}
+}
