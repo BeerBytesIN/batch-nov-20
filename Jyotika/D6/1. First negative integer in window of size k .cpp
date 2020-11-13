@@ -1,6 +1,5 @@
 /* finding the first negative integer in the window of size k */
-// fuck ratings, i am in love with learning process
-
+/* brute force O(n^2) approach*/
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
