@@ -1,1 +1,3 @@
-Adding soltions to the problems of BeerBytesIN
+# BeerBytesIN
+
+Adding solutions to the problems of [BeerBytesIN](https://beerbytes.in/)
