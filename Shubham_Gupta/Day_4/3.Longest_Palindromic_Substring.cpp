@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// Approach 1: Recursion
 int n;
 int find_substring(string &s, int i, int j, int **dp)
 {
@@ -56,6 +57,9 @@ string longestPalindrome_RECURSION(string &s)
 
     return s.substr(start, len);
 }
+
+//==========================================================================
+// Approach 2: DP
 string longestPalindrome_DP(string &s)
 {
     int n = s.length();
