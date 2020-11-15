@@ -30,7 +30,21 @@ int countBinarySubstrings(string &s) {
     }
 
 // Approach 2: O(n)
-
+ int countBinarySubstrings(string &s) {
+        int n=s.length();
+        
+        int ans=0,prev=0,curr=1;
+        for(int i=1;i<n;i++){
+            if(s[i]==s[i-1]) curr++;
+            else{
+                ans+=min(prev,curr);
+                prev=curr;
+                curr=1;
+            }
+        }
+        
+        return ans+min(prev,curr);
+    }
 int main()
 {
     int t;
