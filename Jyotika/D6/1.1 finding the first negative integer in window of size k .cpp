@@ -1,6 +1,4 @@
-
-// fuck ratings, i am in love with learning process
-
+/* optimized but not fully correct */
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
