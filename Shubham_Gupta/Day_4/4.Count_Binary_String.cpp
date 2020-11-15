@@ -30,7 +30,7 @@ int countBinarySubstrings(string &s) {
     }
 
 // Approach 2: O(n)
- int countBinarySubstrings(string &s) {
+ int countBinarySubstrings2(string &s) {
         int n=s.length();
         
         int ans=0,prev=0,curr=1;
@@ -53,8 +53,8 @@ int main()
     {
         string s;
         cin >> s;
-        cout << longestPalindrome_RECURSION(s) << endl;
-        cout << longestPalindrome_DP(s) << endl;
+        cout << countBinarySubstrings(s) << endl;
+        cout << countBinarySubstrings2(s) << endl;
     }
     return 0;
 }
