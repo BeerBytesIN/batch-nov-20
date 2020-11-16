@@ -48,7 +48,7 @@ int main()
 	map<vector<int>, int>mp;
 	for(int i=0;i<n;i++)
 	{
-		vector<int>quadraplet;
+		
 		for(int j=i+1;j<n;j++)
 		{
 			for(int k=j+1;k<n;k++)
@@ -56,17 +56,18 @@ int main()
 				int start = k+1;
 				int endd = n;
 				int x = target - (nums[i] + nums[j] + nums[k] );
-				
+				vector<int>quadraplet;
 				if(binary_search(start, endd, x)){
 				     	quadraplet.push_back(nums[i]);
 						quadraplet.push_back(nums[j]);
 						quadraplet.push_back(nums[k]);
 						quadraplet.push_back(x);
+						mp[quadraplet]++;
 				}
 				
 			}
 		}
-		mp[quadraplet]++;
+		
 	}
 	for(auto it=mp.begin();it!=mp.end();it++)
 	{

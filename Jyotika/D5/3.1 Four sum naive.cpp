@@ -3,7 +3,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-#define fastio ios_base::sync_With_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define fastio ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 
 int main()
 {
@@ -22,13 +22,14 @@ int main()
 	map<vector<int>, int>mp;  // for storing the unique vectors
 	for(int i=0;i<n;i++)
 	{
-		vector<int>quadraplet;
+		
 		for(int j=i+1;j<n;j++)
 		{
 			for(int k=j+1;k<n;k++)
 			{
 				for(int m=k+1;m<n;m++)
 				{
+					vector<int>quadraplet;
 					int x = nums[i] + nums[j] + nums[k] + nums[m];
 					if(x==target)
 					{
@@ -36,11 +37,12 @@ int main()
 						quadraplet.push_back(nums[j]);
 						quadraplet.push_back(nums[k]);
 						quadraplet.push_back(nums[m]);
+						mp[quadraplet]++;
 					}
 				}
 			}
 		}
-		mp[quadraplet]++;
+		
 	}
 	vector<vector<int>>ans;
 	for(auto it=mp.begin();it!=mp.end();it++)
