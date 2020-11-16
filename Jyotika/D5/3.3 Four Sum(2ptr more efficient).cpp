@@ -1,8 +1,6 @@
 /* 4 sum (RDX TYPES)*/ 
 /* A more optimized approach */
-/* Jumping over the duplicate numbers to make the code more optimized and avoiding the duplicates in the answer*/
 /* Whenever the values at the left and at the right add up to the remaining , we directly step to the next one */
-/* take care of while crossing over the duplicates , thats how optimizing the code without the use of the hashset*/
 /* Time complexity : O(n^3) */
 
 #include<bits/stdc++.h>
