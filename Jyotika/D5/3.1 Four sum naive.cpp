@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	
+	fastio;
 	int n;
 	cin>>n;
 	vector<int>nums;
