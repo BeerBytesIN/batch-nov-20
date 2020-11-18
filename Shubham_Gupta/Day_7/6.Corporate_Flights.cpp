@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 // Leetcode 1109
 // Approach 1: O(n*m) T.C. 
      vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
