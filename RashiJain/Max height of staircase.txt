@@ -1,0 +1,11 @@
+class Solution {
+    static int maxStairHeight(int N) {
+        int sum=0,temp=1,total=0;
+        sum=N*2;
+        total = (int)Math.sqrt(sum);
+        temp = (total*(total+1))/2;
+        if(temp > N)
+            total--;
+        return total;
+    }
+};

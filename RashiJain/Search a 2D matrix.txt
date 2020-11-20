@@ -1,0 +1,32 @@
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if(matrix.length==0 || matrix[0].length==0)
+            return false;
+        int rows = matrix.length, cols = matrix[0].length;       
+        int r=0;
+        if(target<matrix[0][0] || target>matrix[rows-1][cols-1])
+            return false;
+        for(int i=0;i<rows;i++){
+            if(target<=matrix[i][cols-1]){
+                r=i;
+                break;
+            }
+        }
+        int start=0,end=cols-1, temp=0;
+        int mid = 0;
+        while(end>=start){
+            mid=(start+end)/2;
+            if(matrix[r][mid]==target){
+                temp =1;
+                break;
+            }
+            else if(target<matrix[r][mid])
+                end=mid-1;
+            else 
+                start=mid+1;
+        }
+        if(temp==1)
+            return true;
+        return false;
+    }
+}

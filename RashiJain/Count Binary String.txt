@@ -1,0 +1,27 @@
+class Solution {
+    public int countBinarySubstrings(String s) {
+        char[] c=s.toCharArray();
+        int total=0;
+        char cur=c[0];
+        for(int i=0;i<c.length-1;i++){
+            int zeros=0,ones=0;
+            cur = c[i];
+            for(int j=i;j<c.length;j++){
+                if(c[j]!=cur && ones>0 && zeros>0)
+                    break;
+                if(c[j]=='0'){
+                    zeros++;
+                    cur='0';
+                }else{
+                    ones++;
+                    cur='1';
+                }
+                if(zeros==ones){
+                    total++;
+                    break;
+                }
+            }
+        }
+        return total;
+    }
+}
