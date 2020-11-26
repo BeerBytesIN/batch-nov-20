@@ -1,0 +1,14 @@
+class Solution {
+    public int[] xorQueries(int[] arr, int[][] queries) {
+        int[] a = new int[queries.length];
+        for(int i=0;i<queries.length;i++){
+            int start=queries[i][0];
+            int end=queries[i][1];
+            int total=0;
+            for(int j=start;j<=end;j++)
+                total^=arr[j];
+            a[i]=total;
+        }
+        return a;
+    }
+}

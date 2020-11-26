@@ -1,0 +1,16 @@
+public class Solution {
+    public int findMinXor(ArrayList<Integer> A) {
+        int min=Integer.MAX_VALUE,k=0;
+        int[] arr = new int[A.size()];
+        Iterator<Integer> itr = A.iterator();
+        while(itr.hasNext())
+            arr[k++]=itr.next();
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length-1;i++){
+            int n=arr[i]^arr[i+1];
+            if(n<min)
+                min=n;
+        }
+        return min;
+    }
+}
