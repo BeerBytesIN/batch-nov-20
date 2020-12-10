@@ -1,1 +1,1 @@
-Adding soltions to the problems of BeerBytesIN
+Adding solutions to the problems of BeerBytesIN
