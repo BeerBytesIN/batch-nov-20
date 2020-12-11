@@ -32,9 +32,6 @@ Node* buildTree(string str)
     // Corner Case
     if(str.length() == 0 || str[0] == 'N')
         return NULL;
-
-    // Creating vector of strings from input
-    // string after spliting by space
     vector<string> ip;
 
     istringstream iss(str);
@@ -110,35 +107,10 @@ int main() {
 }
 
 
-// } Driver Code Ends
-
-
-/* Tree node class
-
-struct Node
-{
-    int data; //data of the node
-    Node *left, *right; //left and right references
-
-    // Constructor of tree node
-    Node(int key)
-    {
-        data = key;
-        left = right = NULL;
-    }
-}; */
-
-// Method that prints the bottom view.
-
-//{
-   // Your Code Here
-//}
-
 #include<unordered_map>
 #include<queue>
 void bottomView(Node *root)
 {
-    //Your code here
     if(root==NULL)
     {
         return;
@@ -168,11 +140,8 @@ void bottomView(Node *root)
                 q.push({blah->right,temp+1});
             }
             count--;
-            
-           // if(!hash[temp])
-           // {
-                hash[temp]=blah->data;
-           // }
+            hash[temp]=blah->data;
+         
             if(temp<min)
             {
                 min=temp;
