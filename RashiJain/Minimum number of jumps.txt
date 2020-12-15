@@ -1,0 +1,26 @@
+class solve{
+    static int minJumps(int[] arr){
+        int total=0;
+        int res = jumps(arr,0,arr.length-1,total);
+        return res;
+    }
+    static int jumps(int[] arr,int n,int size,int total){
+        if(arr[n]>=size-n){
+            total++;
+            return total;
+        }
+        if(arr[n]==0)
+            return -1;
+        int max=n+1;
+        for(int i=n+1;i<=arr[n]+n;i++){
+            if(arr[i]>=size-i){
+                return jumps(arr,i,size,total+1);
+            }
+            
+            if(arr[i]>=arr[max])
+                max=i;
+        }
+        return jumps(arr,max,size,total+1);
+        
+    }
+}
