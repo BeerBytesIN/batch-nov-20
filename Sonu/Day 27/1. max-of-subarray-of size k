@@ -1,0 +1,27 @@
+// https://practice.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1
+
+vector <int> max_of_subarrays(int *arr, int n, int k){
+    // your code here
+    multiset<int> maxh;
+    for(int i=0; i<k; i++)
+        maxh.insert(arr[i]);
+    
+    vector<int> ans;
+    ans.push_back(*maxh.rbegin());
+    maxh.erase(maxh.rbegin());
+    
+    for(int i=k; i<n; i++)
+    {
+        maxh.insert(arr[i]);
+        
+        auto it=maxh.find(arr[i-k]);
+        maxh.erase(it);
+        
+        ans.push_back(*maxh.rbegin());
+        maxh.erase(maxh.rbegin());
+    }
+    
+    
+    return ans;
+    
+}
