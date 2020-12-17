@@ -8,13 +8,15 @@ long long minCost(long long arr[], long long n) {
     
     long long cost=0;
     while(minh.size()>=2){
-        int z=minh.top();
+        long long z=minh.top();
         minh.pop();
         z+=minh.top();
         minh.pop();
         cost+=z;
         
+        minh.push(z);
+        
     }
-    cost+=minh.top();
+    // cost+=minh.top();
     return cost;
 }
