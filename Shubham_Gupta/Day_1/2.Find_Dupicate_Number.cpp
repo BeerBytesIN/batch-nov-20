@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 // 287
 int findDuplicate(vector<int> &nums)
