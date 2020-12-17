@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 // 287
 int findDuplicate(vector<int> &nums)
@@ -22,7 +22,7 @@ int findDuplicate(vector<int> &nums)
 
     return -1;
 }
-int findDuplicate(vector<int>&a){
+int findDuplicate1(vector<int>&a){
     int left=1;
     int right=a.size()-1;
     while(left<=right){
