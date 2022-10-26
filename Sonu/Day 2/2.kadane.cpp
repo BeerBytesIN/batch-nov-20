@@ -3,6 +3,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+int x =5;
+
 
 int maxSubarraySum(int arr[], int n){
     
