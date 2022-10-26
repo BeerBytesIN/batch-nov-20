@@ -25,4 +25,8 @@ int main() {
 	   else cout<<"No\n";
 	}
 	return 0;
+	
+	int x = 5;
+	int y = 6;
+	x = y+5;
 }
